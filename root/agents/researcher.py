@@ -3,6 +3,7 @@ from google.adk.tools import google_search
 from root.agent import MODEL
 
 researcher_agent = Agent(
+    model = MODEL,
     name = 'researcher_agent',
     description = "Answers a given sub-question with factual information.Cite sources when possible and keep answers concise.",
     instruction = """
