@@ -1,6 +1,6 @@
 from google.adk.agents import Agent
 from google.adk.tools import google_search
-from root.agent import MODEL
+from root.config import MODEL
 
 researcher_agent = Agent(
     model = MODEL,

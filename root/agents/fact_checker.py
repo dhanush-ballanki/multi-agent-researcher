@@ -1,5 +1,5 @@
 from google.adk.agents import Agent
-from root.agent import MODEL
+from root.config import MODEL
 
 fact_checker_agent = Agent(
     model = MODEL,

@@ -1,5 +1,5 @@
 from google.adk.agents.llm_agent import Agent
-from root.agent import MODEL
+from root.config import MODEL
 
 decomposer_agent = Agent(
     model = MODEL,

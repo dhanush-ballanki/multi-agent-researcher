@@ -1,10 +1,12 @@
-from google.adk.agents.llm_agent import Agent
+from google.adk.agents import SequentialAgent
+from root.agents import decomposer,fact_checker,researcher,synthesizer
 
-MODEL = 'gemini-3-flash-preview'
 
-root_agent = Agent(
-    model= MODEL,
-    name='root_agent',
-    description='A helpful assistant for user questions.',
-    instruction='Answer user questions to the best of your knowledge',
+
+orchestrator = SequentialAgent(
+    name='Orchestrator',
+    description="Uses all sub agents to do an efficient research",
+    sub_agents=[decomposer.decomposer_agent,researcher.researcher_agent,fact_checker.fact_checker_agent,synthesizer.synthesizer_agent]
 )
+
+root_agent = orchestrator

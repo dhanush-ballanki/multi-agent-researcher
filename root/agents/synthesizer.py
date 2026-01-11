@@ -1,5 +1,5 @@
 from google.adk.agents import Agent
-from root.agent import MODEL
+from root.config import MODEL
 
 synthesizer_agent = Agent(
     model = MODEL,
